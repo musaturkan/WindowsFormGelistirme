@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ornek_3_MirasAlma.Oyun
 {
-    public class Arac
+    public abstract class _Arac
     {
         int _yakitMiktari = 0;
         public string Marka { get; set; }

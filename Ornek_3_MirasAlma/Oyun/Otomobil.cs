@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace Ornek_3_MirasAlma.Oyun
 {
-    public class Helikopter: _Arac
+    public class Otomobil:_Arac
     {
-        public int PervaneCapi { get; set; }
-
         public override void HareketEt(int km)
         {
-            Console.WriteLine("Helikopter hareket etti");
+            Console.WriteLine("Otomobil hareket etti");
         }
     }
 }

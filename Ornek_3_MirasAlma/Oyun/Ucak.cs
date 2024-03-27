@@ -10,8 +10,12 @@ namespace Ornek_3_MirasAlma.Oyun
     /// Inheritance: Miras alma
     /// Ucak sınıfı Arac sınıfından türetilerek oluşturulmuştur.
     /// </summary>
-    public class Ucak:Arac
+    public class Ucak:_Arac
     {
         public int KanatAcikligi { get; set; }
+        public override void HareketEt(int km)
+        {
+            Console.WriteLine("Uçak havalandı");
+        }
     }
 }
