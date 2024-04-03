@@ -27,8 +27,19 @@ namespace Lokanta
 
         private void MasaSiparis_Load(object sender, EventArgs e)
         {
-            int y_ekseni = 10;
-            int x_ekseni = 10;
+            int y_ekseni = 100;
+            int x_ekseni = 100;
+
+            Label formBaslik=new Label();
+            formBaslik.Location = new Point(150,10);
+            formBaslik.Text = "Masa Sipariş Alma Formu";
+            formBaslik.Size = new Size(400, 50);
+            formBaslik.ForeColor = Color.DarkRed;
+            formBaslik.BackColor = Color.Azure;
+            formBaslik.Font = new Font("Arial",18); 
+            this.Controls.Add(formBaslik);
+
+
             for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 5; j++)
@@ -40,17 +51,15 @@ namespace Lokanta
                     btn.ForeColor = Color.White;
                     btn.Location = new Point(x_ekseni, y_ekseni);
                     btn.Size = new Size(100, 100);
-                    btn.Click += btn_MasaSiparis;
+                    btn.Click += btn_MasaSiparis;                          
                     this.Controls.Add(btn);
                     x_ekseni=x_ekseni+100;
                 }
-                x_ekseni = 10;
+                x_ekseni = 100;
                 y_ekseni=y_ekseni+100;
             }
-           
 
-            
-
+            this.Size = new Size(1024, 700);
 
         }
     }

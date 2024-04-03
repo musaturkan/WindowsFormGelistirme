@@ -20,6 +20,11 @@ namespace Lokanta
             form2.ShowDialog();
         }
 
-       
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            DataModel.LokantaContext model=new DataModel.LokantaContext();
+            var masaListesi = model.Masa.ToList();
+
+        }
     }
 }

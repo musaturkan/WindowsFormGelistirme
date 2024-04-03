@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             pnl_AnaEkran = new Panel();
+            ıconButton2 = new FontAwesome.Sharp.IconButton();
+            ıconButton1 = new FontAwesome.Sharp.IconButton();
+            ibtn_Rezervasyon = new FontAwesome.Sharp.IconButton();
             ibtn_Masa = new FontAwesome.Sharp.IconButton();
             btn_YıllıkRapor = new Button();
             btn_PersonelRapor = new Button();
@@ -36,15 +39,15 @@
             btn_SiparisRapor = new Button();
             btn_KasaIslemleri = new Button();
             btn_Musteri = new Button();
-            btn_Mutfak = new Button();
-            btn_PaketServis = new Button();
-            btn_Rezervasyon = new Button();
             pnl_AnaEkran.SuspendLayout();
             SuspendLayout();
             // 
             // pnl_AnaEkran
             // 
             pnl_AnaEkran.BackgroundImageLayout = ImageLayout.Stretch;
+            pnl_AnaEkran.Controls.Add(ıconButton2);
+            pnl_AnaEkran.Controls.Add(ıconButton1);
+            pnl_AnaEkran.Controls.Add(ibtn_Rezervasyon);
             pnl_AnaEkran.Controls.Add(ibtn_Masa);
             pnl_AnaEkran.Controls.Add(btn_YıllıkRapor);
             pnl_AnaEkran.Controls.Add(btn_PersonelRapor);
@@ -52,23 +55,75 @@
             pnl_AnaEkran.Controls.Add(btn_SiparisRapor);
             pnl_AnaEkran.Controls.Add(btn_KasaIslemleri);
             pnl_AnaEkran.Controls.Add(btn_Musteri);
-            pnl_AnaEkran.Controls.Add(btn_Mutfak);
-            pnl_AnaEkran.Controls.Add(btn_PaketServis);
-            pnl_AnaEkran.Controls.Add(btn_Rezervasyon);
-            pnl_AnaEkran.Location = new Point(94, 130);
+            pnl_AnaEkran.Location = new Point(63, 92);
             pnl_AnaEkran.Name = "pnl_AnaEkran";
-            pnl_AnaEkran.Size = new Size(487, 361);
+            pnl_AnaEkran.Size = new Size(487, 358);
             pnl_AnaEkran.TabIndex = 0;
+            // 
+            // ıconButton2
+            // 
+            ıconButton2.BackColor = Color.DarkGreen;
+            ıconButton2.Font = new Font("Segoe UI", 24F);
+            ıconButton2.ForeColor = Color.White;
+            ıconButton2.IconChar = FontAwesome.Sharp.IconChar.KitchenSet;
+            ıconButton2.IconColor = Color.White;
+            ıconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ıconButton2.IconSize = 75;
+            ıconButton2.ImageAlign = ContentAlignment.MiddleLeft;
+            ıconButton2.Location = new Point(249, 127);
+            ıconButton2.Name = "ıconButton2";
+            ıconButton2.Size = new Size(232, 120);
+            ıconButton2.TabIndex = 10;
+            ıconButton2.Text = "Mutfak";
+            ıconButton2.TextAlign = ContentAlignment.MiddleRight;
+            ıconButton2.UseVisualStyleBackColor = false;
+            // 
+            // ıconButton1
+            // 
+            ıconButton1.BackColor = Color.ForestGreen;
+            ıconButton1.Font = new Font("Segoe UI", 18F);
+            ıconButton1.ForeColor = Color.White;
+            ıconButton1.IconChar = FontAwesome.Sharp.IconChar.SackDollar;
+            ıconButton1.IconColor = Color.White;
+            ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ıconButton1.IconSize = 75;
+            ıconButton1.ImageAlign = ContentAlignment.TopCenter;
+            ıconButton1.Location = new Point(368, 4);
+            ıconButton1.Name = "ıconButton1";
+            ıconButton1.Size = new Size(113, 122);
+            ıconButton1.TabIndex = 1;
+            ıconButton1.Text = "Sipariş";
+            ıconButton1.TextAlign = ContentAlignment.BottomCenter;
+            ıconButton1.UseVisualStyleBackColor = false;
+            // 
+            // ibtn_Rezervasyon
+            // 
+            ibtn_Rezervasyon.BackColor = Color.OrangeRed;
+            ibtn_Rezervasyon.Font = new Font("Segoe UI", 12F);
+            ibtn_Rezervasyon.ForeColor = Color.White;
+            ibtn_Rezervasyon.IconChar = FontAwesome.Sharp.IconChar.CalendarCheck;
+            ibtn_Rezervasyon.IconColor = Color.White;
+            ibtn_Rezervasyon.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ibtn_Rezervasyon.IconSize = 75;
+            ibtn_Rezervasyon.ImageAlign = ContentAlignment.TopCenter;
+            ibtn_Rezervasyon.Location = new Point(249, 4);
+            ibtn_Rezervasyon.Name = "ibtn_Rezervasyon";
+            ibtn_Rezervasyon.Size = new Size(116, 122);
+            ibtn_Rezervasyon.TabIndex = 1;
+            ibtn_Rezervasyon.Text = "Rezervasyon";
+            ibtn_Rezervasyon.TextAlign = ContentAlignment.BottomCenter;
+            ibtn_Rezervasyon.UseVisualStyleBackColor = false;
             // 
             // ibtn_Masa
             // 
             ibtn_Masa.BackColor = Color.DarkGreen;
             ibtn_Masa.Font = new Font("Segoe UI", 18F);
             ibtn_Masa.ForeColor = Color.White;
-            ibtn_Masa.IconChar = FontAwesome.Sharp.IconChar.KitchenSet;
+            ibtn_Masa.IconChar = FontAwesome.Sharp.IconChar.Table;
             ibtn_Masa.IconColor = Color.FromArgb(255, 128, 0);
             ibtn_Masa.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ibtn_Masa.IconSize = 75;
+            ibtn_Masa.IconSize = 125;
+            ibtn_Masa.ImageAlign = ContentAlignment.TopLeft;
             ibtn_Masa.Location = new Point(0, 3);
             ibtn_Masa.Name = "ibtn_Masa";
             ibtn_Masa.Size = new Size(247, 123);
@@ -143,50 +198,15 @@
             btn_Musteri.Text = "Müşteri";
             btn_Musteri.UseVisualStyleBackColor = false;
             // 
-            // btn_Mutfak
-            // 
-            btn_Mutfak.BackColor = Color.DarkGreen;
-            btn_Mutfak.Font = new Font("Segoe UI", 24F);
-            btn_Mutfak.ForeColor = SystemColors.ControlLightLight;
-            btn_Mutfak.Location = new Point(241, 126);
-            btn_Mutfak.Name = "btn_Mutfak";
-            btn_Mutfak.Size = new Size(246, 122);
-            btn_Mutfak.TabIndex = 3;
-            btn_Mutfak.Text = "Mutfak";
-            btn_Mutfak.UseVisualStyleBackColor = false;
-            // 
-            // btn_PaketServis
-            // 
-            btn_PaketServis.BackColor = Color.DarkOliveGreen;
-            btn_PaketServis.Font = new Font("Segoe UI", 24F);
-            btn_PaketServis.ForeColor = Color.White;
-            btn_PaketServis.Location = new Point(363, 4);
-            btn_PaketServis.Name = "btn_PaketServis";
-            btn_PaketServis.Size = new Size(124, 122);
-            btn_PaketServis.TabIndex = 2;
-            btn_PaketServis.Text = "Paket Servis";
-            btn_PaketServis.UseVisualStyleBackColor = false;
-            // 
-            // btn_Rezervasyon
-            // 
-            btn_Rezervasyon.BackColor = Color.OrangeRed;
-            btn_Rezervasyon.Font = new Font("Segoe UI", 12F);
-            btn_Rezervasyon.ForeColor = Color.White;
-            btn_Rezervasyon.Location = new Point(245, 4);
-            btn_Rezervasyon.Name = "btn_Rezervasyon";
-            btn_Rezervasyon.Size = new Size(119, 122);
-            btn_Rezervasyon.TabIndex = 1;
-            btn_Rezervasyon.Text = "Rezervasyon";
-            btn_Rezervasyon.UseVisualStyleBackColor = false;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(706, 619);
+            ClientSize = new Size(715, 634);
             Controls.Add(pnl_AnaEkran);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             pnl_AnaEkran.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -194,16 +214,15 @@
         #endregion
 
         private Panel pnl_AnaEkran;
-        private Button btn_PaketServis;
-        private Button btn_Rezervasyon;
         private Button btn_YıllıkRapor;
         private Button btn_PersonelRapor;
         private Button btn_DepoRapor;
         private Button btn_SiparisRapor;
         private Button btn_KasaIslemleri;
         private Button btn_Musteri;
-        private Button btn_Mutfak;
         private FontAwesome.Sharp.IconButton ibtn_Masa;
-       
+        private FontAwesome.Sharp.IconButton ibtn_Rezervasyon;
+        private FontAwesome.Sharp.IconButton ıconButton1;
+        private FontAwesome.Sharp.IconButton ıconButton2;
     }
 }
