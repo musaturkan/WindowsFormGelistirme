@@ -24,7 +24,6 @@ namespace Lokanta
         {
             DataModel.LokantaContext model=new DataModel.LokantaContext();
             var masaListesi = model.Masa.ToList();
-
         }
     }
 }
