@@ -30,7 +30,7 @@
         {
             pnl_AnaEkran = new Panel();
             ıconButton2 = new FontAwesome.Sharp.IconButton();
-            ıconButton1 = new FontAwesome.Sharp.IconButton();
+            ibtn_Siparis = new FontAwesome.Sharp.IconButton();
             ibtn_Rezervasyon = new FontAwesome.Sharp.IconButton();
             ibtn_Masa = new FontAwesome.Sharp.IconButton();
             btn_YıllıkRapor = new Button();
@@ -46,7 +46,7 @@
             // 
             pnl_AnaEkran.BackgroundImageLayout = ImageLayout.Stretch;
             pnl_AnaEkran.Controls.Add(ıconButton2);
-            pnl_AnaEkran.Controls.Add(ıconButton1);
+            pnl_AnaEkran.Controls.Add(ibtn_Siparis);
             pnl_AnaEkran.Controls.Add(ibtn_Rezervasyon);
             pnl_AnaEkran.Controls.Add(ibtn_Masa);
             pnl_AnaEkran.Controls.Add(btn_YıllıkRapor);
@@ -78,23 +78,24 @@
             ıconButton2.TextAlign = ContentAlignment.MiddleRight;
             ıconButton2.UseVisualStyleBackColor = false;
             // 
-            // ıconButton1
+            // ibtn_Siparis
             // 
-            ıconButton1.BackColor = Color.ForestGreen;
-            ıconButton1.Font = new Font("Segoe UI", 18F);
-            ıconButton1.ForeColor = Color.White;
-            ıconButton1.IconChar = FontAwesome.Sharp.IconChar.SackDollar;
-            ıconButton1.IconColor = Color.White;
-            ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ıconButton1.IconSize = 75;
-            ıconButton1.ImageAlign = ContentAlignment.TopCenter;
-            ıconButton1.Location = new Point(368, 4);
-            ıconButton1.Name = "ıconButton1";
-            ıconButton1.Size = new Size(113, 122);
-            ıconButton1.TabIndex = 1;
-            ıconButton1.Text = "Sipariş";
-            ıconButton1.TextAlign = ContentAlignment.BottomCenter;
-            ıconButton1.UseVisualStyleBackColor = false;
+            ibtn_Siparis.BackColor = Color.ForestGreen;
+            ibtn_Siparis.Font = new Font("Segoe UI", 18F);
+            ibtn_Siparis.ForeColor = Color.White;
+            ibtn_Siparis.IconChar = FontAwesome.Sharp.IconChar.SackDollar;
+            ibtn_Siparis.IconColor = Color.White;
+            ibtn_Siparis.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ibtn_Siparis.IconSize = 75;
+            ibtn_Siparis.ImageAlign = ContentAlignment.TopCenter;
+            ibtn_Siparis.Location = new Point(368, 4);
+            ibtn_Siparis.Name = "ibtn_Siparis";
+            ibtn_Siparis.Size = new Size(113, 122);
+            ibtn_Siparis.TabIndex = 1;
+            ibtn_Siparis.Text = "Sipariş";
+            ibtn_Siparis.TextAlign = ContentAlignment.BottomCenter;
+            ibtn_Siparis.UseVisualStyleBackColor = false;
+            ibtn_Siparis.Click += ıconButton1_Click;
             // 
             // ibtn_Rezervasyon
             // 
@@ -222,7 +223,7 @@
         private Button btn_Musteri;
         private FontAwesome.Sharp.IconButton ibtn_Masa;
         private FontAwesome.Sharp.IconButton ibtn_Rezervasyon;
-        private FontAwesome.Sharp.IconButton ıconButton1;
+        private FontAwesome.Sharp.IconButton ibtn_Siparis;
         private FontAwesome.Sharp.IconButton ıconButton2;
     }
 }

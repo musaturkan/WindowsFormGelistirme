@@ -9,8 +9,8 @@ namespace Lokanta
 
         private void ibtn_Masa_Click(object sender, EventArgs e)
         {
-            MasaSiparis siparis = new MasaSiparis();
-            siparis.ShowDialog();
+            MasaYonetim masaYonetim= new MasaYonetim();
+            masaYonetim.ShowDialog();
         }
 
         private void btn_KasaIslemleri_Click(object sender, EventArgs e)
@@ -22,8 +22,14 @@ namespace Lokanta
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            DataModel.LokantaContext model=new DataModel.LokantaContext();
-            var masaListesi = model.Masa.ToList();
+
+        }
+
+        private void ýconButton1_Click(object sender, EventArgs e)
+        {
+            //MasaSiparis siparis = new MasaSiparis();
+            Siparis siparis = new Siparis();
+            siparis.ShowDialog();
         }
     }
 }
