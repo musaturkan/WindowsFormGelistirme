@@ -1,3 +1,5 @@
+using VeriKatmani.LokantaVt;
+
 namespace Lokanta
 {
     public partial class Form1 : Form
@@ -22,7 +24,7 @@ namespace Lokanta
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Tedarikci a = new Tedarikci();
         }
 
         private void ýconButton1_Click(object sender, EventArgs e)

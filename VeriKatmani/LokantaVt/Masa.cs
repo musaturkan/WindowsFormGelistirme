@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Lokanta.DataModel;
+namespace VeriKatmani.LokantaVt;
 
 [Table("Masa")]
 public class Masa

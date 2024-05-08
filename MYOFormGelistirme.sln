@@ -17,7 +17,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsNetFramework", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsNetApp", "WinFormsNetApp\WinFormsNetApp.csproj", "{5FF3EEA1-17A5-4CF6-B98F-886E1D36A892}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lokanta", "Lokanta\Lokanta.csproj", "{F496A513-3FE4-4D0F-8B5C-93B0E6332CE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lokanta", "Lokanta\Lokanta.csproj", "{F496A513-3FE4-4D0F-8B5C-93B0E6332CE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeriKatmani", "VeriKatmani\VeriKatmani.csproj", "{7002A0B6-9598-47AB-B2AE-6004D4040CA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IslemLayer", "IslemLayer\IslemLayer.csproj", "{9C285487-B97D-4F06-A031-858CF29C3D17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{F496A513-3FE4-4D0F-8B5C-93B0E6332CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F496A513-3FE4-4D0F-8B5C-93B0E6332CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F496A513-3FE4-4D0F-8B5C-93B0E6332CE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7002A0B6-9598-47AB-B2AE-6004D4040CA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7002A0B6-9598-47AB-B2AE-6004D4040CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7002A0B6-9598-47AB-B2AE-6004D4040CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7002A0B6-9598-47AB-B2AE-6004D4040CA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C285487-B97D-4F06-A031-858CF29C3D17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C285487-B97D-4F06-A031-858CF29C3D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C285487-B97D-4F06-A031-858CF29C3D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C285487-B97D-4F06-A031-858CF29C3D17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

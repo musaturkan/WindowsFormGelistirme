@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using VeriKatmani.LokantaVt;
 
 namespace Lokanta
 {
@@ -19,7 +11,7 @@ namespace Lokanta
 
         private void Siparis_Load(object sender, EventArgs e)
         {
-            DataModel.LokantaContext model=new DataModel.LokantaContext();
+            LokantaContext model=new LokantaContext();
             var masaListe = model.Masa.ToList();
 
             int x_ekseni=100,y_ekseni=100;  
