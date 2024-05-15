@@ -10,11 +10,20 @@ using System.Windows.Forms;
 using VeriKatmani.LokantaVt;
 using IslemLayer;
 using IslemLayer.Masa_Islem;
+using System.ComponentModel.DataAnnotations;
+using IslemLayer.Soyutlama;
 
 namespace Lokanta
 {
     public partial class MasaYonetim : Form
     {
+        //MasaIslem islem = new MasaIslem();
+        IMasa masa_islem = new MasaIslem();
+        /// <summary>
+        /// Dependency Invenision prensibi ile kullanılan Container mantığı
+        /// IoC Conteyner
+        /// Fabrika tasarım deseniyle nesne üretimi başka bir katmana alınabilir.
+        /// </summary>
         public MasaYonetim()
         {
             InitializeComponent();
@@ -22,6 +31,7 @@ namespace Lokanta
 
         private void btn_MasaEkle_Click(object sender, EventArgs e)
         {
+            lbl_masa_ekle_error.Text = "";
             //LokantaContext model = new LokantaContext();
 
             //Masa yeniMasa = new Masa();
@@ -30,18 +40,37 @@ namespace Lokanta
             //yeniMasa.KacKisilik = Convert.ToInt32(tb_KacKisilk.Text);
             //yeniMasa.EklenmeTarihi = DateTime.Now;
             IslemLayer.Models.MasaGuncelle_DTO yeniMasa = new IslemLayer.Models.MasaGuncelle_DTO();
+            yeniMasa.KacKisilik = Convert.ToInt32(tb_KacKisilk.Text);
+            yeniMasa.MasaKodu = tb_MasaKodu.Text;
+            yeniMasa.Ad = tb_MasaAdi.Text;
 
-            IslemLayer.Masa_Islem.MasaIslem mislem = new IslemLayer.Masa_Islem.MasaIslem();
-            mislem.MasaEkle(yeniMasa);
+            ValidationContext validation_context = new ValidationContext(yeniMasa);
+            List<ValidationResult> liste = new List<ValidationResult>();
+            bool modelDogrulama = Validator.TryValidateObject(yeniMasa, validation_context, liste, true);
+            
+            if (modelDogrulama==false)
+            {
+                foreach (var hataMesaj in liste)
+                {
+                    lbl_masa_ekle_error.Text += hataMesaj.ErrorMessage;
+                }
+            }
+            else
+            {
+                //IslemLayer.Masa_Islem.MasaIslem mislem = new IslemLayer.Masa_Islem.MasaIslem();            
+                masa_islem.MasaEkle(yeniMasa);                 
+                var masaListe = masa_islem.MasaListeGetir();
+                dgv_MasaListe.DataSource = masaListe;
+            }
+
+
 
             //model.Masa.Add(yeniMasa);
 
             //model.SaveChanges();
 
             //var masaListe = model.Masa.ToList();
-            var masaListe = mislem.MasaListeGetir();
-
-            dgv_MasaListe.DataSource = masaListe;
+           
         }
 
         private void MasaYonetim_Load(object sender, EventArgs e)
@@ -49,8 +78,8 @@ namespace Lokanta
             //LokantaContext model = new LokantaContext();
             //var masaListe = model.Masa.ToList();
 
-            MasaIslem islem = new MasaIslem();
-            var masaListe = islem.MasaListeGetir();
+            ///MasaIslem islem = new MasaIslem();
+            var masaListe = masa_islem.MasaListeGetir();
 
             dgv_MasaListe.DataSource = masaListe;
 
@@ -65,9 +94,9 @@ namespace Lokanta
                 var sutunSecim = dgv_MasaListe.SelectedColumns;
 
                 int masaId = Convert.ToInt32(secilenMasaId);
-                MasaIslem islem = new MasaIslem();
-                islem.MasaSil(masaId);
-                dgv_MasaListe.DataSource=islem.MasaListeGetir();
+                //MasaIslem islem = new MasaIslem();
+                masa_islem.MasaSil(masaId);
+                dgv_MasaListe.DataSource= masa_islem.MasaListeGetir();
 
                 //LokantaContext model = new LokantaContext();
 
@@ -90,13 +119,13 @@ namespace Lokanta
             if (dgv_MasaListe.SelectedRows.Count>0)
             {
                 var secilenId = Convert.ToInt32(dgv_MasaListe.SelectedRows[0].Cells[0].Value);
-                MasaIslem masaIslem = new MasaIslem();
+                //MasaIslem masaIslem = new MasaIslem();
                 IslemLayer.Models.MasaGuncelle_DTO masa = new IslemLayer.Models.MasaGuncelle_DTO();
                 masa.Id = secilenId;
                 masa.MasaKodu = tb_MasaKodu.Text;
                 masa.Ad= tb_MasaAdi.Text;
                 masa.KacKisilik= Convert.ToInt32(tb_KacKisilk.Text);
-                masaIslem.MasaGuncelle(masa);
+                masa_islem.MasaGuncelle(masa);
 
                 //LokantaContext model = new LokantaContext();
                 //var guncellenecekMasa=model.Masa.FirstOrDefault(m=>m.Id==secilenId);
@@ -106,7 +135,7 @@ namespace Lokanta
                 //guncellenecekMasa.KacKisilik = Convert.ToInt32(tb_KacKisilk.Text);
                 //model.SaveChanges();
 
-                dgv_MasaListe.DataSource = masaIslem.MasaListeGetir();
+                dgv_MasaListe.DataSource = masa_islem.MasaListeGetir();
             }
             
 

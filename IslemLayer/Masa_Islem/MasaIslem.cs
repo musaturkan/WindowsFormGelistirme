@@ -1,6 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+﻿using IslemLayer.Models;
+using IslemLayer.Soyutlama;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +13,7 @@ using VeriKatmani.LokantaVt;
 
 namespace IslemLayer.Masa_Islem
 {
-    public class MasaIslem
+    public class MasaIslem : IMasa
     {
         LokantaContext context=new LokantaContext();
 
@@ -30,17 +35,33 @@ namespace IslemLayer.Masa_Islem
 
         public void MasaEkle(Models.MasaGuncelle_DTO yeniMasa)
         {
-            if (yeniMasa != null && yeniMasa.Ad != null && yeniMasa.MasaKodu != null)
+
+            //DTOMapper mapper = new DTOMapper();
+            //mapper.Topla<double, int>(9.5, 23);
+
+            //mapper.Topla<int, int>(3, 4);
+            //mapper.Topla<float, float>(3, 4);
+
+            ValidationContext validation_context = new ValidationContext(yeniMasa);
+            List<ValidationResult> liste =new List<ValidationResult>();
+            
+            bool modelDogrulama = Validator.TryValidateObject(yeniMasa, validation_context,liste,true);
+            
+            //if (yeniMasa != null && yeniMasa.Ad != null && yeniMasa.MasaKodu != null)
             //if(//buraya modelin validation durumunu kontrol eden kod bulunup yazılacak)
+            if(modelDogrulama==true)
             {
-                Masa masa = new Masa();
-                masa.MasaKodu = yeniMasa.MasaKodu;
-                masa.Ad = yeniMasa.Ad;
-                masa.KacKisilik = yeniMasa.KacKisilik;
+                DTOMapper mapper = new DTOMapper();
+                ///Generic metodumuz kullanılarak dto nesnesi entity nesnesine dönüştürülür
+                var masa = mapper.EntityeDonustur<Masa,MasaGuncelle_DTO>(yeniMasa);
+                //Explicit, Implicit operatörleri tanımlanırsa dönüşüm doğrudan eşitlik ile yapılabilir.
+                //Masa m = yeniMasa;
+            
 
                 context.Masa.Add(masa);
                 context.SaveChanges();
             }
+           
 
         }
 
@@ -105,6 +126,9 @@ namespace IslemLayer.Masa_Islem
             }
         }
 
+     
+
+       
 
     }
 }

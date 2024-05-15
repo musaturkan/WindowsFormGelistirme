@@ -40,6 +40,7 @@
             label5 = new Label();
             ıconButton1 = new FontAwesome.Sharp.IconButton();
             btn_MasaGuncelle = new Button();
+            lbl_masa_ekle_error = new Label();
             ((System.ComponentModel.ISupportInitialize)dgv_MasaListe).BeginInit();
             SuspendLayout();
             // 
@@ -155,11 +156,21 @@
             btn_MasaGuncelle.UseVisualStyleBackColor = true;
             btn_MasaGuncelle.Click += btn_MasaGuncelle_Click;
             // 
+            // lbl_masa_ekle_error
+            // 
+            lbl_masa_ekle_error.AutoSize = true;
+            lbl_masa_ekle_error.ForeColor = Color.Red;
+            lbl_masa_ekle_error.Location = new Point(194, 81);
+            lbl_masa_ekle_error.Name = "lbl_masa_ekle_error";
+            lbl_masa_ekle_error.Size = new Size(0, 15);
+            lbl_masa_ekle_error.TabIndex = 12;
+            // 
             // MasaYonetim
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(759, 670);
+            Controls.Add(lbl_masa_ekle_error);
             Controls.Add(btn_MasaGuncelle);
             Controls.Add(ıconButton1);
             Controls.Add(label5);
@@ -194,5 +205,6 @@
         private Label label5;
         private FontAwesome.Sharp.IconButton ıconButton1;
         private Button btn_MasaGuncelle;
+        private Label lbl_masa_ekle_error;
     }
 }
