@@ -8,6 +8,10 @@ namespace IslemLayer.WebApi
 {
     public class ParalelGorev
     {
+        /// <summary>
+        /// Ana bir Task altında alt Task olarak tüm alt işlemler başlatılabilir.
+        /// 
+        /// </summary>
         public void ParalelIslemYap()
         {
             List<Models.Urun> urunListesi = new List<Models.Urun>();
@@ -36,10 +40,13 @@ namespace IslemLayer.WebApi
                     api.UrunEkle(yeni);
                 }, TaskCreationOptions.AttachedToParent);
             });
+            //tüm alt Task işlemlerinin bitmesini beklemek için Wait kullanılır
             servisCagrilari.Wait();
         }
 
-
+        /// <summary>
+        /// İstenen görevlerin bitmesini beklemek, istenen görevin beklemeden geçilmesini sağlamak
+        /// </summary>
         public void ParalelIslemYap2()
         {
             List<Models.Urun> urunListesi = new List<Models.Urun>();
@@ -73,6 +80,9 @@ namespace IslemLayer.WebApi
 
         }
 
+        /// <summary>
+        /// Paralele görevleri diziye doldurup yönetmek mümkündür
+        /// </summary>
         public void ParalelIslemYap3()
         {
             List<Task> gorevDizi= new List<Task>();
