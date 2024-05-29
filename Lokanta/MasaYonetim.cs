@@ -18,7 +18,13 @@ namespace Lokanta
     public partial class MasaYonetim : Form
     {
         //MasaIslem islem = new MasaIslem();
-        IMasa masa_islem = new MasaIslem();
+        IMasa masa_islem = MasaFabrika.MasaOlustur(MasaTipi.MasaIslem);// new MasaIslem();
+        IMasa masa_islem2 = MasaFabrika.MasaOlusturGeneric<MasaIslem>();
+        IMasa masa_islem3 = MasaFabrika.MasaOlusturGeneric2<MasaIslem>();
+
+        //IMasaFabrika fabrika = new MasaFabrika2();
+        //IMasa masa_islem4 = fabrika
+
         /// <summary>
         /// Dependency Invenision prensibi ile kullanılan Container mantığı
         /// IoC Conteyner

@@ -141,8 +141,9 @@
             btn_YıllıkRapor.Name = "btn_YıllıkRapor";
             btn_YıllıkRapor.Size = new Size(113, 100);
             btn_YıllıkRapor.TabIndex = 9;
-            btn_YıllıkRapor.Text = "Yıllık Rapor";
+            btn_YıllıkRapor.Text = "Urun API";
             btn_YıllıkRapor.UseVisualStyleBackColor = true;
+            btn_YıllıkRapor.Click += btn_YıllıkRapor_Click;
             // 
             // btn_PersonelRapor
             // 
