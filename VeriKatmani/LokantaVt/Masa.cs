@@ -14,4 +14,6 @@ public class Masa
     
     [Column("Eklenme_Tarihi")]
     public DateTime? EklenmeTarihi { get; set; }
+
+    public ICollection<Siparis>? Siparis { get; set; }
 }

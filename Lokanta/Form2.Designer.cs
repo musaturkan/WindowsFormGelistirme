@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            panel2 = new Panel();
-            panel3 = new Panel();
-            panel4 = new Panel();
-            panel5 = new Panel();
-            panel6 = new Panel();
-            panel7 = new Panel();
+            lbl_ToplamCiro = new Label();
             label1 = new Label();
-            label2 = new Label();
+            panel2 = new Panel();
+            lbl_GunlukCiro = new Label();
             label3 = new Label();
-            label4 = new Label();
+            panel4 = new Panel();
+            panel3 = new Panel();
+            lbl_GunlukSiparisSayisi = new Label();
             label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
+            panel5 = new Panel();
             label10 = new Label();
-            label11 = new Label();
+            label7 = new Label();
+            panel6 = new Panel();
+            lbl_TopamSiparisSayi = new Label();
+            label6 = new Label();
+            panel7 = new Panel();
             label12 = new Label();
+            label8 = new Label();
             panel8 = new Panel();
-            label13 = new Label();
-            label16 = new Label();
-            label17 = new Label();
-            label18 = new Label();
-            label19 = new Label();
             label14 = new Label();
+            label19 = new Label();
+            label18 = new Label();
+            label17 = new Label();
+            label16 = new Label();
+            label13 = new Label();
             panel9 = new Panel();
             label15 = new Label();
             panel10 = new Panel();
@@ -72,71 +72,23 @@
             // panel1
             // 
             panel1.BackColor = Color.MidnightBlue;
-            panel1.Controls.Add(label2);
+            panel1.Controls.Add(lbl_ToplamCiro);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(205, 60);
             panel1.Name = "panel1";
             panel1.Size = new Size(497, 144);
             panel1.TabIndex = 0;
             // 
-            // panel2
+            // lbl_ToplamCiro
             // 
-            panel2.BackColor = Color.MidnightBlue;
-            panel2.Controls.Add(label4);
-            panel2.Controls.Add(label3);
-            panel2.Controls.Add(panel4);
-            panel2.Location = new Point(205, 210);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(497, 144);
-            panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.MidnightBlue;
-            panel3.Controls.Add(label11);
-            panel3.Controls.Add(label5);
-            panel3.Location = new Point(446, 362);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(256, 144);
-            panel3.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.MidnightBlue;
-            panel4.Location = new Point(3, 149);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(232, 144);
-            panel4.TabIndex = 3;
-            // 
-            // panel5
-            // 
-            panel5.BackColor = Color.MidnightBlue;
-            panel5.Controls.Add(label10);
-            panel5.Controls.Add(label7);
-            panel5.Location = new Point(205, 512);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(232, 141);
-            panel5.TabIndex = 3;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = Color.MidnightBlue;
-            panel6.Controls.Add(label9);
-            panel6.Controls.Add(label6);
-            panel6.Location = new Point(205, 362);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(232, 144);
-            panel6.TabIndex = 3;
-            // 
-            // panel7
-            // 
-            panel7.BackColor = Color.MidnightBlue;
-            panel7.Controls.Add(label12);
-            panel7.Controls.Add(label8);
-            panel7.Location = new Point(446, 512);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(256, 141);
-            panel7.TabIndex = 4;
+            lbl_ToplamCiro.AutoSize = true;
+            lbl_ToplamCiro.Font = new Font("Times New Roman", 35.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lbl_ToplamCiro.ForeColor = Color.White;
+            lbl_ToplamCiro.Location = new Point(44, 62);
+            lbl_ToplamCiro.Name = "lbl_ToplamCiro";
+            lbl_ToplamCiro.Size = new Size(179, 53);
+            lbl_ToplamCiro.TabIndex = 1;
+            lbl_ToplamCiro.Text = "100,000";
             // 
             // label1
             // 
@@ -149,16 +101,27 @@
             label1.TabIndex = 0;
             label1.Text = "Toplam Ciro";
             // 
-            // label2
+            // panel2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Times New Roman", 35.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(44, 62);
-            label2.Name = "label2";
-            label2.Size = new Size(179, 53);
-            label2.TabIndex = 1;
-            label2.Text = "100,000";
+            panel2.BackColor = Color.MidnightBlue;
+            panel2.Controls.Add(lbl_GunlukCiro);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(panel4);
+            panel2.Location = new Point(205, 210);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(497, 144);
+            panel2.TabIndex = 1;
+            // 
+            // lbl_GunlukCiro
+            // 
+            lbl_GunlukCiro.AutoSize = true;
+            lbl_GunlukCiro.Font = new Font("Times New Roman", 35.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lbl_GunlukCiro.ForeColor = Color.White;
+            lbl_GunlukCiro.Location = new Point(44, 73);
+            lbl_GunlukCiro.Name = "lbl_GunlukCiro";
+            lbl_GunlukCiro.Size = new Size(71, 53);
+            lbl_GunlukCiro.TabIndex = 5;
+            lbl_GunlukCiro.Text = "25";
             // 
             // label3
             // 
@@ -171,16 +134,34 @@
             label3.TabIndex = 4;
             label3.Text = "Günlük Ciro";
             // 
-            // label4
+            // panel4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Times New Roman", 35.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(44, 73);
-            label4.Name = "label4";
-            label4.Size = new Size(71, 53);
-            label4.TabIndex = 5;
-            label4.Text = "25";
+            panel4.BackColor = Color.MidnightBlue;
+            panel4.Location = new Point(3, 149);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(232, 144);
+            panel4.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.MidnightBlue;
+            panel3.Controls.Add(lbl_GunlukSiparisSayisi);
+            panel3.Controls.Add(label5);
+            panel3.Location = new Point(446, 362);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(256, 144);
+            panel3.TabIndex = 2;
+            // 
+            // lbl_GunlukSiparisSayisi
+            // 
+            lbl_GunlukSiparisSayisi.AutoSize = true;
+            lbl_GunlukSiparisSayisi.Font = new Font("Times New Roman", 35.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lbl_GunlukSiparisSayisi.ForeColor = Color.White;
+            lbl_GunlukSiparisSayisi.Location = new Point(32, 70);
+            lbl_GunlukSiparisSayisi.Name = "lbl_GunlukSiparisSayisi";
+            lbl_GunlukSiparisSayisi.Size = new Size(71, 53);
+            lbl_GunlukSiparisSayisi.TabIndex = 9;
+            lbl_GunlukSiparisSayisi.Text = "37";
             // 
             // label5
             // 
@@ -193,49 +174,15 @@
             label5.TabIndex = 6;
             label5.Text = "Günlük Sipariş Sayısı";
             // 
-            // label6
+            // panel5
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Carlito", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(24, 22);
-            label6.Name = "label6";
-            label6.Size = new Size(165, 23);
-            label6.TabIndex = 7;
-            label6.Text = "Toplam Sipariş Sayısı";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Carlito", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(21, 17);
-            label7.Name = "label7";
-            label7.Size = new Size(156, 23);
-            label7.TabIndex = 8;
-            label7.Text = "Toplam Masa Sayısı";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Carlito", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(32, 17);
-            label8.Name = "label8";
-            label8.Size = new Size(137, 23);
-            label8.TabIndex = 9;
-            label8.Text = "Dolu Masa Sayısı";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Times New Roman", 35.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(44, 70);
-            label9.Name = "label9";
-            label9.Size = new Size(119, 53);
-            label9.TabIndex = 6;
-            label9.Text = "1877";
+            panel5.BackColor = Color.MidnightBlue;
+            panel5.Controls.Add(label10);
+            panel5.Controls.Add(label7);
+            panel5.Location = new Point(205, 512);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(232, 141);
+            panel5.TabIndex = 3;
             // 
             // label10
             // 
@@ -248,16 +195,58 @@
             label10.TabIndex = 6;
             label10.Text = "25";
             // 
-            // label11
+            // label7
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Times New Roman", 35.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label11.ForeColor = Color.White;
-            label11.Location = new Point(32, 70);
-            label11.Name = "label11";
-            label11.Size = new Size(71, 53);
-            label11.TabIndex = 9;
-            label11.Text = "37";
+            label7.AutoSize = true;
+            label7.Font = new Font("Carlito", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(21, 17);
+            label7.Name = "label7";
+            label7.Size = new Size(156, 23);
+            label7.TabIndex = 8;
+            label7.Text = "Toplam Masa Sayısı";
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.MidnightBlue;
+            panel6.Controls.Add(lbl_TopamSiparisSayi);
+            panel6.Controls.Add(label6);
+            panel6.Location = new Point(205, 362);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(232, 144);
+            panel6.TabIndex = 3;
+            // 
+            // lbl_TopamSiparisSayi
+            // 
+            lbl_TopamSiparisSayi.AutoSize = true;
+            lbl_TopamSiparisSayi.Font = new Font("Times New Roman", 35.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lbl_TopamSiparisSayi.ForeColor = Color.White;
+            lbl_TopamSiparisSayi.Location = new Point(44, 70);
+            lbl_TopamSiparisSayi.Name = "lbl_TopamSiparisSayi";
+            lbl_TopamSiparisSayi.Size = new Size(119, 53);
+            lbl_TopamSiparisSayi.TabIndex = 6;
+            lbl_TopamSiparisSayi.Text = "1877";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Carlito", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(24, 22);
+            label6.Name = "label6";
+            label6.Size = new Size(165, 23);
+            label6.TabIndex = 7;
+            label6.Text = "Toplam Sipariş Sayısı";
+            // 
+            // panel7
+            // 
+            panel7.BackColor = Color.MidnightBlue;
+            panel7.Controls.Add(label12);
+            panel7.Controls.Add(label8);
+            panel7.Location = new Point(446, 512);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(256, 141);
+            panel7.TabIndex = 4;
             // 
             // label12
             // 
@@ -270,6 +259,17 @@
             label12.TabIndex = 10;
             label12.Text = "12";
             label12.Click += label12_Click;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Carlito", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(32, 17);
+            label8.Name = "label8";
+            label8.Size = new Size(137, 23);
+            label8.TabIndex = 9;
+            label8.Text = "Dolu Masa Sayısı";
             // 
             // panel8
             // 
@@ -285,50 +285,16 @@
             panel8.Size = new Size(200, 593);
             panel8.TabIndex = 5;
             // 
-            // label13
+            // label14
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 14F);
-            label13.ForeColor = Color.White;
-            label13.Location = new Point(72, 67);
-            label13.Name = "label13";
-            label13.Size = new Size(61, 25);
-            label13.TabIndex = 0;
-            label13.Text = "Genel";
-            label13.Click += label13_Click;
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI", 14F);
-            label16.ForeColor = Color.White;
-            label16.Location = new Point(73, 194);
-            label16.Name = "label16";
-            label16.Size = new Size(79, 25);
-            label16.TabIndex = 8;
-            label16.Text = "Masalar";
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Font = new Font("Segoe UI", 14F);
-            label17.ForeColor = Color.White;
-            label17.Location = new Point(73, 150);
-            label17.Name = "label17";
-            label17.Size = new Size(76, 25);
-            label17.TabIndex = 9;
-            label17.Text = "Ürünler";
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Segoe UI", 14F);
-            label18.ForeColor = Color.White;
-            label18.Location = new Point(72, 109);
-            label18.Name = "label18";
-            label18.Size = new Size(106, 25);
-            label18.TabIndex = 10;
-            label18.Text = "Kullanıcılar";
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 14F);
+            label14.ForeColor = Color.White;
+            label14.Location = new Point(73, 279);
+            label14.Name = "label14";
+            label14.Size = new Size(84, 25);
+            label14.TabIndex = 12;
+            label14.Text = "Raporlar";
             // 
             // label19
             // 
@@ -341,16 +307,50 @@
             label19.TabIndex = 11;
             label19.Text = "Son Durumlar";
             // 
-            // label14
+            // label18
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 14F);
-            label14.ForeColor = Color.White;
-            label14.Location = new Point(73, 279);
-            label14.Name = "label14";
-            label14.Size = new Size(84, 25);
-            label14.TabIndex = 12;
-            label14.Text = "Raporlar";
+            label18.AutoSize = true;
+            label18.Font = new Font("Segoe UI", 14F);
+            label18.ForeColor = Color.White;
+            label18.Location = new Point(72, 109);
+            label18.Name = "label18";
+            label18.Size = new Size(106, 25);
+            label18.TabIndex = 10;
+            label18.Text = "Kullanıcılar";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Font = new Font("Segoe UI", 14F);
+            label17.ForeColor = Color.White;
+            label17.Location = new Point(73, 150);
+            label17.Name = "label17";
+            label17.Size = new Size(76, 25);
+            label17.TabIndex = 9;
+            label17.Text = "Ürünler";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 14F);
+            label16.ForeColor = Color.White;
+            label16.Location = new Point(73, 194);
+            label16.Name = "label16";
+            label16.Size = new Size(79, 25);
+            label16.TabIndex = 8;
+            label16.Text = "Masalar";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 14F);
+            label13.ForeColor = Color.White;
+            label13.Location = new Point(72, 67);
+            label13.Name = "label13";
+            label13.Size = new Size(61, 25);
+            label13.TabIndex = 0;
+            label13.Text = "Genel";
+            label13.Click += label13_Click;
             // 
             // panel9
             // 
@@ -409,6 +409,7 @@
             Controls.Add(panel1);
             Name = "Form2";
             Text = "Form2";
+            Load += Form2_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -435,19 +436,19 @@
         private Panel panel1;
         private Panel panel2;
         private Panel panel3;
-        private Label label2;
+        private Label lbl_ToplamCiro;
         private Label label1;
         private Panel panel4;
         private Panel panel5;
         private Panel panel6;
         private Panel panel7;
-        private Label label4;
+        private Label lbl_GunlukCiro;
         private Label label3;
-        private Label label11;
+        private Label lbl_GunlukSiparisSayisi;
         private Label label5;
         private Label label10;
         private Label label7;
-        private Label label9;
+        private Label lbl_TopamSiparisSayi;
         private Label label6;
         private Label label12;
         private Label label8;
