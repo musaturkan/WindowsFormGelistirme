@@ -35,7 +35,7 @@ namespace IslemLayer
             ///E tipinde bir nesne oluşturulur. E tipinin ne olduğu metodun kullanıldığı yerde bildirilir.
             E entity = new E();
 
-            ///Dto nesnesinin özellik listesi elde edilir.
+            ///Dto nesnesinin özellik listesi elde edilir.Propertyler elde edilere kontrol edilecek
             var dtoPropertyies = typeof(T).GetProperties().ToList();
           
             ///dto nesnesinin propertylerinde döngü oluşturulur
