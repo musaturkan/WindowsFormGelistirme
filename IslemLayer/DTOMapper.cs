@@ -24,7 +24,7 @@ namespace IslemLayer
 
         /// <summary>
         /// iki parametre ile çalışır. Entity tipi ve dto tipi belirtilerek dönüştürme yapar. dönüşüm yapılacak tip isimleri E ve T
-        /// generik bildirimi ile yapılması gerekir.
+        /// generik bildirimi ile yapılması gerekir.aa
         /// </summary>
         /// <typeparam name="E">Dönüştürülecek entity tipidir</typeparam>
         /// <typeparam name="T">Dönüşecek dto tipidir</typeparam>
