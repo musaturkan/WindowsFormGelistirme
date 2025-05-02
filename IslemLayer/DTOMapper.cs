@@ -38,7 +38,7 @@ namespace IslemLayer
             ///Dto nesnesinin özellik listesi elde edilir.Propertyler elde edilere kontrol edilecek
             var dtoPropertyies = typeof(T).GetProperties().ToList();
           
-            ///dto nesnesinin propertylerinde döngü oluşturulur
+            ///dto nesnesinin propertylerinde döngü oluşturuluraaa
             foreach(var dtoOzellik in dtoPropertyies)
             {
                     ///sıradaki property ismi ile aynı isimli bir alan E sınıfında var mı          
